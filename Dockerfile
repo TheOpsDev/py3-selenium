@@ -31,6 +31,7 @@ WORKDIR /usr/local/bin/
 RUN curl -L https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz \
     -s -o geckodriver_v30.tar.gz \
     && tar -xzf geckodriver_v30.tar.gz
+RUN rm -rf geckodriver_v30.tar.gz
 
 ENV PYTHONUNBUFFERED 1
 
